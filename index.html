@@ -5,16 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cryptify || Password Generator</title>
   </head>
-  <body class="w-screen min-h-screen bg-gray-950 flex flex-col">
+  <body class="w-screen min-h-screen bg-gray-950 flex flex-col font-[Domine]">
     <main class="w-full flex flex-col">
       <section
-        class="bg-gray-800 flex flex-col items-center max-w-[550px] mx-auto"
+        class="bg-gray-800 flex flex-col items-left max-w-[550px] mx-auto p-12 rounded-md my-16"
       >
-        <h1 class="text-[2.5rem] font-extrabold text-white">
-          Generate a <span class="text-[#4ADF86]">random password</span>
-        </h1>
+        <div class="mb-12 flex flex-col gap-2">
+          <h1 class="text-[2.5rem] font-extrabold text-white max-w-[360px]">
+            Generate a <span class="text-[#4ADF86]">random password</span>
+          </h1>
+          <p class="text-xl text-white">
+            Never use an insecure password again.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-8">
+          <button
+            class="bg-[#10B981] text-white px-4 py-2 rounded-md cursor-pointer hover:bg-[#059669]"
+          >
+            Generate passwords
+          </button>
+
+          <div class="border-b-[1px] border-[#2F3E53] w-full"></div>
+
+          <div class="flex flex-row gap-6">
+            <div class="w-[212px] h-[40px] rounded-md bg-[#273549]">
+              <p></p>
+            </div>
+            <div class="w-[212px] h-[40px] rounded-md bg-[#273549]">
+              <p></p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script type="module" src="/script.js"></script>
