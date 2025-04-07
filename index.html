@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      :root {
-        --color-clifford: #da373d;
-      }
-    </style>
     <title>Password Generator</title>
   </head>
-  <body>
+  <body class="w-screen min-h-screen bg-gray-950 flex flex-col">
+    <main class="w-full flex flex-col">
+      <section
+        class="bg-gray-800 flex flex-col items-center max-w-[550px] mx-auto"
+      >
+        <h1 class="text-[2.5rem] font-extrabold text-white">
+          Generate a <span class="text-[#4ADF86]">random password</span>
+        </h1>
+      </section>
+    </main>
     <script type="module" src="/script.js"></script>
   </body>
 </html>
