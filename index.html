@@ -30,18 +30,23 @@
         <div class="flex flex-col gap-8">
           <button
             class="bg-[#10B981] text-white px-4 py-2 rounded-md cursor-pointer hover:bg-[#059669]"
+            id="button-el"
           >
             Generate passwords
           </button>
 
           <div class="border-b-[1px] border-[#2F3E53] w-full"></div>
 
-          <div class="flex flex-row gap-6">
-            <div class="w-[212px] h-[40px] rounded-md bg-[#273549]">
-              <p></p>
+          <div class="flex flex-row gap-6 flex-wrap">
+            <div
+              class="w-[212px] h-[40px] rounded-md bg-[#273549] flex items-center justify-center"
+            >
+              <p id="generator-one" class="text-[#10B981] font-bold"></p>
             </div>
-            <div class="w-[212px] h-[40px] rounded-md bg-[#273549]">
-              <p></p>
+            <div
+              class="w-[212px] h-[40px] rounded-md bg-[#273549] flex items-center justify-center"
+            >
+              <p id="generator-two" class="text-[#10B981] font-bold"></p>
             </div>
           </div>
         </div>
