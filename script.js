@@ -2,11 +2,9 @@ let buttonEl = document.getElementById("button-el");
 let generatorOne = document.getElementById("generator-one");
 let generatorTwo = document.getElementById("generator-two");
 
-buttonEl.addEventListener("click", (event) => {
-  event.preventDefault();
-  getRandomCharacters();
+buttonEl.addEventListener("click", () => {
+  generateCharacters();
 });
-
 
 const characters = [
   "A",
@@ -102,12 +100,23 @@ const characters = [
   "/",
 ];
 
-function getRandomCharacters() {
-  let passwordLength = 15;
-  for (let i = 0; i < passwordLength; i++) {
-    const randomIndexOne = Math.floor(Math.random() * characters.length);
-    const randomIndexTwo = Math.floor(Math.random() * characters.length);
-    generatorOne.textContent += characters[randomIndexOne];
-    generatorTwo.textContent += characters[randomIndexTwo];
+// function getRandomCharactersOne() {
+//   let passwordLength = 15;
+//   for (let i = 0; i < passwordLength; i++) {
+//     const randomIndexOne = Math.floor(Math.random() * characters.length);
+//     const randomIndexTwo = Math.floor(Math.random() * characters.length);
+//     generatorOne.textContent += characters[randomIndexOne];
+//     generatorTwo.textContent += characters[randomIndexTwo];
+//   }
+//     return generatorOne;
+// }
+
+function generateCharacters() {
+  let length = 15;
+  for (let i = 0; i < length; i++) {
+    let randomIndexOne = Math.floor(Math.random() * characters.length);
+    let randomIndexTwo = Math.floor(Math.random() * characters.length);
+    generatorOne.value += characters[randomIndexOne];
+    generatorTwo.value += characters[randomIndexTwo];
   }
 }
