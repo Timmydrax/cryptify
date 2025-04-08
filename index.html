@@ -10,6 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Hide the default spinner arrows */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Remove default spinner */
+        margin: 0; /* Remove margin */
+      }
+
+      /* For Firefox */
+      input[type="number"] {
+        appearance: none;
+        -moz-appearance: textfield; /* Remove default spinner */
+      }
+    </style>
     <title>Cryptify || Password Generator</title>
   </head>
   <body
@@ -30,7 +44,7 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-4 sm:gap-8">
+        <div class="mb-4 sm:mb-8 flex flex-col gap-4 sm:gap-8">
           <button
             class="bg-[#10B981] text-white px-4 py-2 rounded-md cursor-pointer hover:bg-[#059669]"
             id="button-el"
@@ -55,6 +69,23 @@
               readonly
             />
           </div>
+        </div>
+        <div class="flex flex-row items-center gap-4 w-full">
+          <div
+            class="px-4 py-2 rounded-md bg-[#273549] flex flex-row items-center gap-2"
+          >
+            <label for="length" class="text-white">Password Length:</label>
+            <input
+              class="text-center text-white bg-[#10B981FF] outline-none border-none p-2 rounded-md"
+              type="number"
+              id="length"
+              min="4"
+              max="15"
+              value="15"
+            />
+          </div>
+
+          <div></div>
         </div>
       </section>
     </main>

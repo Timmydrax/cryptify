@@ -1,6 +1,7 @@
 let buttonEl = document.getElementById("button-el");
 let generatorOne = document.getElementById("generator-one");
 let generatorTwo = document.getElementById("generator-two");
+let lengthInput = document.getElementById("length");
 
 buttonEl.addEventListener("click", () => {
   generateCharacters();
@@ -101,7 +102,8 @@ const characters = [
 ];
 
 function generateCharacters() {
-  let length = 15;
+  // For setting password length, parsing the input value from string to number
+  let length = parseInt(lengthInput.value);
 
   // Setting an empty string before the loop to ensure only new generated characters show..
   generatorOne.value = "";
