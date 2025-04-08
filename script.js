@@ -102,6 +102,11 @@ const characters = [
 
 function generateCharacters() {
   let length = 15;
+
+  // Setting an empty string before the loop to ensure only new generated characters show..
+  generatorOne.value = "";
+  generatorTwo.value = "";
+
   for (let i = 0; i < length; i++) {
     let randomIndexOne = Math.floor(Math.random() * characters.length);
     let randomIndexTwo = Math.floor(Math.random() * characters.length);
