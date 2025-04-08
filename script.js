@@ -7,99 +7,39 @@ buttonEl.addEventListener("click", () => {
   generateCharacters();
 });
 
-// const characters = [
-//   "A",
-//   "B",
-//   "C",
-//   "D",
-//   "E",
-//   "F",
-//   "G",
-//   "H",
-//   "I",
-//   "J",
-//   "K",
-//   "L",
-//   "M",
-//   "N",
-//   "O",
-//   "P",
-//   "Q",
-//   "R",
-//   "S",
-//   "T",
-//   "U",
-//   "V",
-//   "W",
-//   "X",
-//   "Y",
-//   "Z",
-//   "a",
-//   "b",
-//   "c",
-//   "d",
-//   "e",
-//   "f",
-//   "g",
-//   "h",
-//   "i",
-//   "j",
-//   "k",
-//   "l",
-//   "m",
-//   "n",
-//   "o",
-//   "p",
-//   "q",
-//   "r",
-//   "s",
-//   "t",
-//   "u",
-//   "v",
-//   "w",
-//   "x",
-//   "y",
-//   "z",
-//   "0",
-//   "1",
-//   "2",
-//   "3",
-//   "4",
-//   "5",
-//   "6",
-//   "7",
-//   "8",
-//   "9",
-//   "~",
-//   "`",
-//   "!",
-//   "@",
-//   "#",
-//   "$",
-//   "%",
-//   "^",
-//   "&",
-//   "*",
-//   "(",
-//   ")",
-//   "_",
-//   "-",
-//   "+",
-//   "=",
-//   "{",
-//   "[",
-//   "}",
-//   "]",
-//   ",",
-//   "|",
-//   ":",
-//   ";",
-//   "<",
-//   ">",
-//   ".",
-//   "?",
-//   "/",
-// ];
+// First Input Field
+generatorOne.addEventListener("click", () => {
+  generatorOne.select();
+  // Copy Command
+  document.execCommand("copy");
+
+  Swal.fire({
+    icon: "success",
+    title: "Copied!",
+    text: "Password 1 has been copied to clipboard!",
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+});
+
+// Second Input Field
+generatorTwo.addEventListener("click", () => {
+  generatorTwo.select();
+  // Copy Command
+  document.execCommand("copy");
+
+  Swal.fire({
+    icon: "success",
+    title: "Copied!",
+    text: "Password 2 has been copied to clipboard!",
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+});
 
 function generateCharacters() {
   // For setting password length, parsing the input value from string to number
@@ -120,7 +60,6 @@ function generateCharacters() {
 }
 
 // Character differentiation...
-
 function getCharacterReserve() {
   let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let numbers = "0123456789";
