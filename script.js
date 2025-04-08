@@ -100,17 +100,6 @@ const characters = [
   "/",
 ];
 
-// function getRandomCharactersOne() {
-//   let passwordLength = 15;
-//   for (let i = 0; i < passwordLength; i++) {
-//     const randomIndexOne = Math.floor(Math.random() * characters.length);
-//     const randomIndexTwo = Math.floor(Math.random() * characters.length);
-//     generatorOne.textContent += characters[randomIndexOne];
-//     generatorTwo.textContent += characters[randomIndexTwo];
-//   }
-//     return generatorOne;
-// }
-
 function generateCharacters() {
   let length = 15;
   for (let i = 0; i < length; i++) {
